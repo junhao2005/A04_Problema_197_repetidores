@@ -6,22 +6,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desencriptador X' a X</title>
+    <link rel="stylesheet" href="../estilos.css">
 </head>
 <body>
-    <div>
+    <div class="container">
 
-        <h1>Desencriptador</h1>
+        <h2>Desencriptador</h2>
 
         <form method="post">
 
-            <input type="text" name="mensaje" placeholder="Escribe el mensaje encriptado" value="<?php echo htmlspecialchars($mensaje); ?>">
+            <label for="mensaje">Introduce el mensaje cifrado:</label>
+            <input type="text" id="mensaje" name="mensaje" placeholder="Escribe el mensaje encriptado" value="<?php echo htmlspecialchars($mensaje); ?>">
             <button type="submit">Desencriptar</button>
 
         </form>
 
         <?php if ($resultado !== "") { ?>
 
-            <p>Mensaje original: <?php echo htmlspecialchars($resultado); ?></p>
+            <div class="resultado">
+                <strong>Mensaje original:</strong><br>
+                <span><?php echo htmlspecialchars($resultado); ?></span>
+            </div>
         
         <?php } ?>
         

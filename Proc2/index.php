@@ -1,4 +1,7 @@
 <?php
+// Función para desencriptar el mensaje cifrado X'' a X'
+require_once __DIR__ . '/desencriptador.php';
+
 $resultado = ""; // para guardar el mensaje ya descifrado
 $entrada = "";  // para guardar el mensaje cifrado que se ha escrito el user
 
@@ -10,29 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resultado = desencriptar($entrada);
 }
 
-// Función para desencriptar el mensaje cifrado X'' a X'
-function desencriptar($x_dos) {
-    $n = strlen($x_dos); // Obtenemos la longitud del mensaje cifrado
-    $x_uno = str_repeat(" ", $n); // guardamos numero de logitud 
-    
-    $izquierda = 0; 
-    $derecha = $n - 1;
-    
-    // Recorremos el string cifrado X'' carácter por carácter
-    for ($i = 0; $i < $n; $i++) {
-        if ($i % 2 == 0) {
-            // Posición par: va al principio de X'
-            $x_uno[$izquierda] = $x_dos[$i];
-            $izquierda++;
-        } else {
-            // Posición impar: va al final de X'
-            $x_uno[$derecha] = $x_dos[$i];
-            $derecha--;
-        }
-    }
-    
-    return $x_uno;
-}
 ?>
 
 <!DOCTYPE html>

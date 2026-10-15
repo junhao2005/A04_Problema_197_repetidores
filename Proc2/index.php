@@ -3,14 +3,14 @@
 require_once __DIR__ . '/desencriptador.php';
 
 $resultado = ""; // para guardar el mensaje ya descifrado
-$entrada = "";  // para guardar el mensaje cifrado que se ha escrito el user
+$mensaje_cifrado = "";  // para guardar el mensaje cifrado que se ha escrito el user
 
 // Comprobamos si el formulario ha sido enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $entrada = $_POST["mensaje_cifrado"];
+    $mensaje_cifrado = $_POST["mensaje_cifrado"];
     
     // Llamamos función para desencriptar (X'' -> X')
-    $resultado = desencriptar($entrada);
+    $resultado = desencriptar($mensaje_cifrado);
 }
 
 ?>
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     <form method="POST" action="">
         <label for="mensaje_cifrado">Introduce el mensaje cifrado ($X''$):</label>
-        <input type="text" id="mensaje_cifrado" name="mensaje_cifrado" value="<?php echo htmlspecialchars($entrada); ?>" placeholder="Ej: BnodJos, dBneam" required>
+        <input type="text" id="mensaje_cifrado" name="mensaje_cifrado" value="<?php echo htmlspecialchars($mensaje_cifrado); ?>" placeholder="Ej: BnodJos, dBneam" required>
         
         <button type="submit">Desencriptar</button>
     </form>

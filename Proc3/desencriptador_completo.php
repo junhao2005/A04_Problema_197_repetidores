@@ -12,7 +12,7 @@ function desencriptarFase1($x_dos) {
     $x_uno = str_repeat(" ", $n); 
     $izquierda = 0; 
     $derecha = $n - 1;
-
+    
     for ($i = 0; $i < $n; $i++) {
         if ($i % 2 == 0) {
             $x_uno[$izquierda] = $x_dos[$i];

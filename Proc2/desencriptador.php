@@ -8,6 +8,7 @@ function desencriptar($x_dos) {
     $derecha = $n - 1;
 
     for ($i = 0; $i < $n; $i++) {// Recorremos cada carácter del mensaje cifrado
+        //comprueba si $i es un número par.
         if ($i % 2 == 0) {
            // Posición par: va al principio de X'
             $x_uno[$izquierda] = $x_dos[$i];

@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     <form method="POST" action="">
         <label for="mensaje_cifrado">Introduce el mensaje cifrado (X''):</label>
-        <input type="text" id="mensaje_cifrado" name="mensaje_cifrado" value="<?php echo htmlspecialchars($mensaje_cifrado); ?>" placeholder="Ej: BnodJos, dBneam" required>
+        <input type="text" id="mensaje_cifrado" name="mensaje_cifrado" value="<?php echo htmlspecialchars($mensaje_cifrado); ?>" placeholder="Ej: BnodJos, dBneam">
         
         <button type="submit">Desencriptar</button>
     </form>
@@ -41,6 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <span><?php echo htmlspecialchars($resultado); ?></span>
         </div>
     <?php endif; ?>
+
+        <br><br>
+
+    <a class="boton" href="../index.php">Volver al menú principal</a>
 </div>
 
 </body>

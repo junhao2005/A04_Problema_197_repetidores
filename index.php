@@ -11,12 +11,12 @@
     <div class="container">
         <h1>Elige una opción</h1>
 
-        <a class="boton" href="Proc1/index.php">Desencriptar X'' a X'</a>
+        <a class="boton" href="Proc1/index.php">Desencriptar X' a X</a>
 
 
         <br><br>
 
-        <a class="boton" href="Proc2/index.php">Desencriptar X' a X</a>
+        <a class="boton" href="Proc2/index.php">Desencriptar X'' a X'</a>
 
         <br><br>
 

@@ -37,7 +37,8 @@ input[type="text"] {
     box-sizing: border-box;
 }
 
-button {
+button,
+.boton {
     background-color: #007bff;
     color: white;
     padding: 10px 15px;
@@ -46,10 +47,20 @@ button {
     cursor: pointer;
     width: 100%;
     font-size: 16px;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
 }
 
-button:hover {
+button:hover,
+.boton:hover {
     background-color: #0056b3;
+}
+
+.container a {
+    color: white;
+    text-decoration: none;
 }
 
 .resultado {

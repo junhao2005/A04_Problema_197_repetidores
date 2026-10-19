@@ -11,13 +11,13 @@
 <body>
     <div class="container">
 
-        <h2>Desencriptador</h2>
+        <h2>Desencriptador (X' a X)</h2>
 
         <form method="post">
 
-            <label for="mensaje">Introduce el mensaje cifrado:</label>
-            <input type="text" id="mensaje" name="mensaje" placeholder="Escribe el mensaje encriptado" value="<?php echo htmlspecialchars($mensaje); ?>">
-            <button type="submit">Desencriptar</button>
+            <label for="mensaje">Introduce el mensaje cifrado: (X')</label>
+            <input type="text" id="mensaje" name="mensaje" placeholder="Ej. BoJ ,dnameB sodn" value="<?php echo htmlspecialchars($mensaje); ?>">
+            <button type="submit">Desencriptar X' -> X</button>
 
         </form>
 
@@ -29,6 +29,10 @@
             </div>
         
         <?php } ?>
+
+            <br><br>
+
+        <a class="boton" href="../index.php">Volver al menú principal</a>
         
     </div>
 </body>

@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["mensaje"])) {
 
         <form method="post" action="">
             <label for="mensaje">Introduce el mensaje cifrado ($X''$):</label>
-            <input type="text" id="mensaje" name="mensaje" placeholder="Ej: BnodJo s, dBneam" value="<?php echo htmlspecialchars($entrada); ?>" required>
+            <input type="text" id="mensaje" name="mensaje" placeholder="Ej: BnodJo s, dBneam" value="<?php echo htmlspecialchars($entrada); ?>">
             <button type="submit">Desencriptar Totalmente</button>
         </form>
 
@@ -48,6 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["mensaje"])) {
             </div>
         <?php } ?>
         
+        <br><br>
+
+    <a class="boton" href="../index.php">Volver al menú principal</a>
     </div>
 </body>
 </html>
